@@ -1,5 +1,5 @@
 locals {
-  restic_image     = "tofran/restic-rclone:0.17.3_1.68.2" # Restic image doesn't have rclone
+  restic_image     = "tofran/restic-rclone:0.17.3_1.68.2" # Restic image doesn't include rclone
   pvc_volume_mount = "/mnt/${var.pvc.name}-data"
   drive_path       = "/${trim(var.backup.remote.gdrive.path, "/")}" # Ensure the path starts with a slash and remove trailing slash
 
